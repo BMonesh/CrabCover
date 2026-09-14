@@ -1,7 +1,7 @@
 # Product Requirements Document (PRD) — v2
 
-> **Official PRD for CrabCover.** Confirmed as the current version. Where this document and
-> `Docs/GameFlowSpec.md` disagree, see `Docs/SPEC_DECISIONS.md` for the resolved decision.
+> **Official PRD for CrabCover.** Confirmed as the current version. The game rules now live in
+> `Docs/GameSpec.md` — where this PRD disagrees with it, **GameSpec wins**.
 
 **Game Title:** Crab Cover
 **Genre:** 3D Tabletop Social Deduction / Party Game

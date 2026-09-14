@@ -1,5 +1,9 @@
 # CrabCover — Spec Decision Sheet
 
+> **History only — do not build from this file.** The rules now live in `Docs/GameSpec.md`, which
+> also contains later decisions that change some rows here (notably the voting flow in D6-D8).
+> Keep this file for the reasoning behind each decision.
+
 **Purpose:** resolve every contradiction between `PRD v2.0` and `Docs/GameFlowSpec.md` so the
 GameMode can be implemented against a single source of truth.
 

@@ -127,8 +127,9 @@ inherit `UObject` and does nothing. Safe to delete.
 ## 3. Documentation conflict — two sources of truth
 
 > **Update:** the official PRD is **v2.0**, now saved in `Docs/PRD.md`. This section was
-> originally written against a "v3.1" that can no longer be found. Conflicts are being resolved
-> in `Docs/SPEC_DECISIONS.md`.
+> originally written against a "v3.1" that can no longer be found. **Resolved:** the PRD and
+> GameFlowSpec have been merged into `Docs/GameSpec.md`, and GameFlowSpec was deleted. This section
+> is kept as history.
 
 `Docs/GameFlowSpec.md` is newer and better than the PRD in several places.
 GameFlowSpec resolves several earlier gaps well: the role validation rule
@@ -255,7 +256,8 @@ prototyped at all until a real AppID exists. Steam Direct is $100 plus review pl
 1. Start the Steam AppID process (longest lead time, independent of everything else).
 2. Fix the character mesh (§2.1) — unblocks all visible multiplayer testing.
 3. Apply config fixes §2.2-2.4.
-4. Merge PRD and GameFlowSpec into one spec, resolving every row in §3.
+4. ~~Merge PRD and GameFlowSpec into one spec, resolving every row in §3.~~ **Done** —
+   `Docs/GameSpec.md`.
 5. Decide the text-clue question (§4.1) — it shapes the whole clue phase.
 6. Lock the role composition table for every player count 4-10, and specify a win-condition
    check that runs after every elimination.

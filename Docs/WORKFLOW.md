@@ -228,9 +228,8 @@ This single task closes Phase 1 and unblocks all visible multiplayer testing.
 
 **Focus:** GameMode logic, phase timers, role distribution, voting arrays.
 
-**Prerequisite:** `Docs/SPEC_DECISIONS.md` must be filled in first. D1 (loop structure) and D2
-(role composition table) are hard blockers — role assignment and the phase machine cannot be
-written correctly against two contradictory specs.
+**Build against:** `Docs/GameSpec.md`. All rules are decided, including the loop structure (§7),
+role counts (§3) and win check (§8) that role assignment and the phase machine depend on.
 
 #### [REVISED] Voice spike moved here from Phase 3
 

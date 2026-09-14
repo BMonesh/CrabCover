@@ -8,7 +8,7 @@ proximity voice chat, expressive avatars, and physics table props.
 - **Logic:** Blueprint-first. C++ hybrid only because custom plugins require a Source module.
 - **Platform:** PC / Steam. Currently on Steam AppID 480 (Spacewar test ID).
 - **Networking:** Listen Server (client-host), Online Subsystem Steam + SteamSockets.
-- **Players:** 4-10 (min-player count is disputed — see `Docs/PROJECT_CONTEXT.md`).
+- **Players:** 4-10. All game rules are in `Docs/GameSpec.md`.
 - **Team:** 2 beginners working remotely. Explain reasoning; do not assume UE fluency.
 
 ## Hard constraint: most of this project is binary
@@ -32,7 +32,7 @@ Blueprint graphs, levels, meshes, or materials.
 | Build rules | `Source/CrabCover/CrabCover.Build.cs`, `Source/*.Target.cs` |
 | Version control config | `.gitattributes`, `.gitignore` |
 | Runtime logs (local only, gitignored) | `Saved/Logs/*.log` |
-| Word pack data | CSV — format is `civilian_word,undercover_word` per row |
+| Word pack data | CSV — file format **not decided yet** (see `Docs/GameSpec.md` §12) |
 
 `Saved/Logs/` is the primary debugging surface for networking failures. When a Steam
 host or join fails silently, read the most recent log there before speculating.
@@ -71,7 +71,7 @@ Already established in `Content/` — follow them:
 - State assumptions explicitly. If a fact about UE 5.8 is uncertain, say so rather than
   guessing — 5.8 is recent and much online material targets older versions.
 - Prefer small verifiable steps with a stated success condition over large refactors.
-- Do not add features that are not in `Docs/GameFlowSpec.md`. Where the spec is silent
+- Do not add features that are not in `Docs/GameSpec.md`. Where the spec is silent
   or contradictory, flag it instead of inventing an answer.
 
 ## Current state
@@ -82,4 +82,5 @@ two players in the same replicated world, character movement replicating.
 Not yet done: visible character meshes, seating, role assignment, clue phase, voting,
 voice chat.
 
-Read `Docs/PROJECT_CONTEXT.md` for the full audit, pending fixes, and open questions.
+Read `Docs/GameSpec.md` for the game rules, and `PROJECT_CONTEXT.md` (repo root) for the
+technical audit and pending fixes.

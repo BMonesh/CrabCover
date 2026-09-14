@@ -126,14 +126,18 @@ inherit `UObject` and does nothing. Safe to delete.
 
 ## 3. Documentation conflict — two sources of truth
 
-`Docs/GameFlowSpec.md` is newer and better than PRD v3.1 (which lives outside the repo).
+> **Update:** the official PRD is **v2.0**, now saved in `Docs/PRD.md`. This section was
+> originally written against a "v3.1" that can no longer be found. Conflicts are being resolved
+> in `Docs/SPEC_DECISIONS.md`.
+
+`Docs/GameFlowSpec.md` is newer and better than the PRD in several places.
 GameFlowSpec resolves several earlier gaps well: the role validation rule
 (`Mr. Blank + Undercover < Civilians`) with host override, Skip/Pass voting, and runoff
 tie resolution.
 
 But the two documents now contradict each other:
 
-| Topic | PRD v3.1 | GameFlowSpec |
+| Topic | PRD v2.0 | GameFlowSpec |
 |---|---|---|
 | Minimum players | 4 | 3 |
 | Role reveal timing | at elimination | at match end only |
@@ -141,7 +145,7 @@ But the two documents now contradict each other:
 | Undercover win | survives to final two | parity with civilians |
 | Mr. Blank guess mechanic | central | absent |
 | Turn timer | 30s + 10s defense | none specified |
-| Disconnect handling | instant elimination | unaddressed |
+| Disconnect handling | rejoin own seat within grace window (**decided: "sleeping crab", see SPEC_DECISIONS D15**) | unaddressed |
 
 **Two conflicts matter most:**
 
